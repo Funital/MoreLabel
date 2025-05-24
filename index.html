@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>모어라벨</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      .product-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .product-link {
+        display: block;
+        height: 100%;
+        color: black;
+        text-decoration: none;
+      }
+
+      .product-link:visited,
+      .product-link:hover,
+      .product-link:active {
+        color: black;
+        text-decoration: none;
+      }
+
+      .product-section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 40px 50px;
+        align-items: stretch;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-hero">
+      <div class="background">
+        <img src="bg1.jpg" alt="배경 이미지" />
+      </div>
+      <nav class="top-nav">
+        <div class="left-nav">
+          <a href="#">SHOP</a>
+          <a href="#">BRAND</a>
+          <a href="#">EVENT</a>
+          <a href="#">LOOKBOOK</a>
+          <a href="#">BOARD</a>
+        </div>
+        <div class="right-nav">
+          <a href="#">내 정보관리</a>
+          <a href="#">검색</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="product-section">
+      <a href="product1.html" class="product-link">
+        <div class="product-card">
+          <img src="product1.png" alt="토마토잼" />
+          <div class="discount-badge">25%</div>
+          <p><strong>[모어라벨]</strong> 토마토잼</p>
+          <p class="price"><del>30,000원</del> <strong>22,500원</strong></p>
+        </div>
+      </a>
+      <a href="product2.html" class="product-link">
+        <div class="product-card">
+          <img src="product2.png" alt="감잼" />
+          <div class="discount-badge">25%</div>
+          <p><strong>[모어라벨]</strong> 감잼</p>
+          <p class="price"><del>30,000원</del> <strong>22,500원</strong></p>
+        </div>
+      </a>
+      <a href="product3.html" class="product-link">
+        <div class="product-card">
+          <img src="product3.png" alt="사과잼" />
+          <div class="discount-badge">25%</div>
+          <p><strong>[모어라벨]</strong> 사과잼</p>
+          <p class="price"><del>30,000원</del> <strong>22,500원</strong></p>
+        </div>
+      </a>
+      <a href="product4.html" class="product-link">
+        <div class="product-card">
+          <img src="product4.png" alt="포도잼" />
+          <div class="discount-badge">35%</div>
+          <p><strong>[모어라벨]</strong> 포도잼</p>
+          <p class="price"><del>30,000원</del> <strong>22,500원</strong></p>
+        </div>
+      </a>
+    </section>
+
+    <script>
+      let current = 0;
+      const images = ["bg1.jpg", "bg2.jpeg"];
+      const bgImg = document.querySelector(".background img");
+
+      setInterval(() => {
+        bgImg.classList.add("fade-out");
+        setTimeout(() => {
+          current = (current + 1) % images.length;
+          bgImg.src = images[current];
+          bgImg.classList.remove("fade-out");
+        }, 300); // 페이드 아웃 지속 시간
+      }, 5000); // 이미지 교체 간격
+    </script>
+  </body>
+</html>

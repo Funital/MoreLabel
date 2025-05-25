@@ -15,6 +15,47 @@
         text-align: center;
         font-size: 40px;
       }
+
+      /* Responsive styles for mobile */
+      @media (max-width: 768px) {
+        .scroll-content {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .two-column-section {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .storytelling-section1,
+        .storytelling-section2,
+        .no-sweetener-section1,
+        .no-sweetener-section2,
+        .no-sweetener-section3 {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .image-column img,
+        .branding-image,
+        .farmer-box img,
+        .universe-box img,
+        .orange-box img {
+          max-width: 80%;
+          height: auto;
+          margin: 0 auto;
+        }
+
+        .text-column,
+        .farmer-text,
+        .univ-text,
+        .sweetener-text {
+          padding: 0 20px;
+        }
+      }
     </style>
   </head>
   <body>

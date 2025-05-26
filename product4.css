@@ -87,3 +87,54 @@ body {
   font-size: 16px;
   line-height: 1.5;
 }
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #a66a2c; /* 갈색 배경 */
+  color: white;
+  padding: 60px 80px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  width: 48%;
+}
+
+.footer-left h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-left .phone {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.footer-left ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.footer-left ul li {
+  margin-bottom: 5px;
+}
+
+.footer-left ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-left ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-right p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
